@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Claus Rüffler" />
+
+<meta name="date" content="2020-11-28" />
+
+<title>Individual Project: How to Save the Loggerhead Turtle?</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Population and community ecology</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Exercises
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./Turtle-Questions.html">1. Crouse et al. 1987 - Questions</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Individual Project: How to Save the Loggerhead Turtle?</h1>
+<h4 class="author">Claus Rüffler</h4>
+<h4 class="date">11/28/2020</h4>
+
+</div>
+
+
+<div class="figure">
+<img src="images/loggerhead.jpg" alt="An adult Loggerhead sea turtle" />
+<p class="caption">An adult Loggerhead sea turtle</p>
+</div>
+<div id="section" class="section level3">
+<h3>1</h3>
+<p>Read the paper <em>A stage-based population model for loggerhead sea turtles and implications for conservation</em> by Crouse <em>et al.</em> (1987, Ecology 68:1412-1423).</p>
+</div>
+<div id="section-1" class="section level3">
+<h3>2</h3>
+<p>Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol (<span class="math inline">\(F_{i}\)</span> for fertilities, <span class="math inline">\(G_{i}\)</span> for growth, <span class="math inline">\(P_{i}\)</span> for staying in a state).</p>
+<div class="figure">
+<img src="images/life-cycle-graph.png" alt="Life-cyle graph for a size-structured population projection model." />
+<p class="caption">Life-cyle graph for a size-structured population projection model.</p>
+</div>
+</div>
+<div id="section-2" class="section level3">
+<h3>3</h3>
+<p>Discuss why the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model.</p>
+<p>page 1413: insufficient age-based data</p>
+<ul>
+<li>“no method has yet been devised to obtain accurate ages of sea turtles”</li>
+<li>“the shells are generally too thin and fragile to hold a reliable tag for long”</li>
+<li>“resulting in inadequate estimates of nesting remigration (and thus fecundity) rates, survival and growth rates, and age at reproductive maturity”</li>
+<li>“The lack of reliable information on age-specific rates in marine turtles precludes the use of age-based population models, so stage class models must be employed.”</li>
+</ul>
+<p>page 1413: stage-based data easier to obtain</p>
+<ul>
+<li>Frazer himself, who analyzed an age-struture model, derived the age-specific parameter values from stage-specific data.</li>
+<li>“A few stages (eggs, hatchlings, and mature, nesting adults) are biologically distinct and easily recognized, and some estimates of survival rates are becoming available for these stages.”</li>
+<li>“Most researchers have used size (as measured by carapace length) as an index of age in marine turtles, so size-based stage classes seem appropriate.”</li>
+</ul>
+<p>page 1414-15: stage-based model of lower dimensionality</p>
+<ul>
+<li>“In addition to the fact that a stage class approach is better supported by the data, one major advantage over using an age class model based on Frazer’s life table is that simulations can be performed with a 7 x 7 matrix, instead of an unwieldy 54 x 54 matrix, thereby minimizing error propagation caused by repeated multiplication of parameters.”</li>
+</ul>
+<!-- Briefly discuss the quality of the demographic data. Where do you see the largest uncertainty in the accuracy of the demographic data? Do you have (feasible!) suggestions for how to improve the estimates for the vital rates and the matrix entries that would allow for more accurate predictions? -->
+</div>
+<div id="section-3" class="section level3">
+<h3>4</h3>
+<p>Briefly explain the connection between Table 3 and Table 4. How do the entries in the first determine the entries in the second?</p>
+<p>Table 3 shows how assumed realationship size classes and age. Furthermore, it shows the estimated annual survival probabilities for each size class and the fecundities for the last three age classes.</p>
+<p>Table 4 shows the population projection matrix based on a size based model. The entries for the stage-based survival and growth probabilities are derived from the age-based survival probabilities according to equations (1) and (2).</p>
+<!-- Eqs.~(1) and (2) explain how the parameters of an age-structured model (age-specific probabilities $p_{i}$ to survive from one year to the next) are used to calculate the stage-specific probabilities to survive and either stay in the same stage-class from one year to the next (the parameters $P_{i}$) or to move to the next stage-class (the probabilities $G_{i}$). This part of the paper is not so easy. Can you nevertheless try to explain the basic idea behind these calculations? -->
+</div>
+<div id="section-4" class="section level3">
+<h3>5</h3>
+<p>Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?</p>
+<p>The matrix is irreducible since all stages can be reached from any other stage by moving along the arrows. Furthermore, the matrix is primitive. The way to see this is by noticing that the life cycle graph has self loops and that it has two neighboring classes that are able to reproduce.</p>
+<p>The fact that the matrix is primitive implies that it has a unique real dominant eigenvalue and corresponding non-negative left and right eigenvectors. Thus, our results will be independent of the initial population vector <span class="math inline">\(\mathbf N(0)\)</span> we might choose for our simulations.</p>
+</div>
+<div id="section-5" class="section level3">
+<h3>6</h3>
+<p>Plot the population dynamics for a sufficiently long time until the time series clearly stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use <span class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?</p>
+<p>The matrix as defined in Table 4 equals</p>
+<pre><code>##        [,1]   [,2]   [,3]   [,4]     [,5]   [,6]    [,7]
+## [1,] 0.0000 0.0000 0.0000 0.0000 127.0000 4.0000 80.0000
+## [2,] 0.6747 0.7370 0.0000 0.0000   0.0000 0.0000  0.0000
+## [3,] 0.0000 0.0486 0.6610 0.0000   0.0000 0.0000  0.0000
+## [4,] 0.0000 0.0000 0.0147 0.6907   0.0000 0.0000  0.0000
+## [5,] 0.0000 0.0000 0.0000 0.0518   0.0000 0.0000  0.0000
+## [6,] 0.0000 0.0000 0.0000 0.0000   0.8091 0.0000  0.0000
+## [7,] 0.0000 0.0000 0.0000 0.0000   0.0000 0.8091  0.8089</code></pre>
+<pre class="r"><code>N.0 &lt;- c(30, 25, 10, 5, 5, 2, 1) # vector of initial densities
+length &lt;- 50 # lenght of the time series
+
+time.series &lt;- matrix(0, nrow=nrow(M), ncol=length+1) # creates a matrix with three rows and (length+1) columns in which the simulated time series will be stored
+time.series[ ,1] &lt;- N.0 # stores N.0 in the first column of the matrix `time.series&#39;
+for (i in 1:length){# executes the matrix multiplication as often as specified by the parameter length and stores result in the matrix time.series
+ time.series[ , i+1] &lt;- M %*% time.series[ , i]
+}
+
+matplot(0:length, t(time.series), type=&quot;l&quot;, lty=1:7, col = 1:7, ylab = &quot;stage abundance&quot;, xlab = &quot;year&quot;) # plots result
+legend(&quot;topright&quot;, legend = c(&quot;stage 1&quot;, &quot;stage 2&quot;, &quot;stage 3&quot;, &quot;stage 4&quot;, &quot;stage 5&quot;, &quot;stage 6&quot;, &quot;stage 7&quot;), lty = 1:7, col = 1, bty = &quot;n&quot;) # defines legend</code></pre>
+<p><img src="Turtle-Questions_files/figure-html/echo-1.png" width="672" /></p>
+<pre class="r"><code>matplot(0:length, t(time.series), type=&quot;l&quot;, lty=1:7, col = 1:7, log=&quot;y&quot;, ylab = &quot;log stage abundance&quot;, xlab = &quot;year&quot;) # plots result on log scale
+legend(&quot;topright&quot;, legend = c(&quot;stage 1&quot;, &quot;stage 2&quot;, &quot;stage 3&quot;, &quot;stage 4&quot;, &quot;stage 5&quot;, &quot;stage 6&quot;, &quot;stage 7&quot;), lty = 1:7, col = 1:7, bty = &quot;n&quot;) # defines legend</code></pre>
+<p><img src="Turtle-Questions_files/figure-html/echo-2.png" width="672" /></p>
+<p>The dynamics enter a phase of exponential decline after roughtly 15 time steps.</p>
+</div>
+<div id="section-6" class="section level3">
+<h3>7</h3>
+<p>Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix.</p>
+<p>The authors describe their method on page 1416, first column. These method are exactly equal to the method you use with your R-code.</p>
+<p>“For each simulation, the power method (Searle 1966, Keyfitz 1977) was used to take successively higher powers of the matrix and postmultiply by the population vectors until the resultant vectors differed frome ach other by only a scalar factor; this factor is <span class="math inline">\(\lambda\)</span> (the dominant eigenvalue) and the vector is proportional to the right eigenvector <span class="math inline">\(\mathbf w\)</span>. The population vectors at this point represent the right eigenvector or stable stage distribution.”</p>
+<p>“The left eigenvector <span class="math inline">\(\mathbf v\)</span> can be found by applying the same procedure to the transposed matrix.”</p>
+</div>
+<div id="section-7" class="section level3">
+<h3>8</h3>
+<p>Compute the dominant eigenvalue <span class="math inline">\(\lambda\)</span> and additionally express it as <span class="math inline">\(r\)</span>, the intrinsic rate of increase.</p>
+<pre class="r"><code>lambda &lt;- time.series[1, length+1]/time.series[1, length] # ratio of population size at the end of the time series for age-class 1. This gives lambda
+lambda</code></pre>
+<pre><code>## [1] 0.945011</code></pre>
+<pre class="r"><code>log(lambda)</code></pre>
+<pre><code>## [1] -0.05655867</code></pre>
+<p>These values for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(r\)</span> are equal to those given in the paper on page 1416 in the left column.</p>
+</div>
+<div id="section-8" class="section level3">
+<h3>9</h3>
+<p>Compute the stable stage distribution (called <span class="math inline">\(\mathbf w\)</span> in this paper). Present the result in a standardised manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.</p>
+<pre class="r"><code>total = sum(time.series[ , length+1]) # total population size at the end of the time series (i.e., the right eigenvector)
+rightEV = time.series[ , length+1]/total # Right eigenvector standardized such that its entries sum up to one. This vector represents proportions in the stable age distribution
+
+rightEV # prints stable age distribution</code></pre>
+<pre><code>## [1] 0.2065144415 0.6697520595 0.1145890881 0.0066229350 0.0003630241 0.0003108129 0.0018476389</code></pre>
+<p>This is the same result as in the paper.</p>
+</div>
+<div id="section-9" class="section level3">
+<h3>10</h3>
+<p>Compute the vector of reproductive values <span class="math inline">\(\mathbf v\)</span>. Present the result in a standardised manner such that the reproductive value of individuals in state 1, <span class="math inline">\(v_{1}\)</span>, equals 1. Compare your result with the numbers given in Table 5 of the paper.</p>
+<pre class="r"><code>transM &lt;- t(M) # transpose of the population projection matrix
+time.series.transpose &lt;- matrix(0, nrow=nrow(M), ncol=length+1)
+time.series.transpose[ , 1] &lt;- N.0
+for (i in 1:length){
+  time.series.transpose[ , i+1] &lt;- transM %*% time.series.transpose[ , i]
+}
+matplot(0:length, t(time.series.transpose), type=&quot;l&quot;, lty=1:3, col = 1, log=&quot;y&quot;, xlab = &quot;year&quot;, ylab = &quot;something that is NOT density&quot;)</code></pre>
+<p><img src="Turtle-Questions_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>leftEV = time.series.transpose[ , length+1]/time.series.transpose[1, length+1] # left eigenvector containing reproductive values with the reproductive value for the first age-class standardized to 1
+leftEV</code></pre>
+<pre><code>## [1]   1.000000   1.400627   5.994795 115.836570 568.785995 507.379034 587.678391</code></pre>
+<p>This vector agrees with the vector given in Table 5.</p>
+</div>
+<div id="section-10" class="section level3">
+<h3>11</h3>
+<p>Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of <span class="math inline">\(\lambda\)</span> with respect to the corresponding matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did in the <span class="math inline">\(\mathsf R\)</span>-exercise yesterday).</p>
+<p>Note that the authors do not present the sensitivity matrix in their paper.</p>
+<pre class="r"><code>outer.product &lt;- outer(leftEV, rightEV)
+inner.product &lt;- (rightEV %*% leftEV)[1]
+
+sensitivities &lt;- outer.product/inner.product
+sensitivities # print sensitivities</code></pre>
+<pre><code>##             [,1]       [,2]        [,3]        [,4]         [,5]         [,6]         [,7]
+## [1,]  0.05100754  0.1654238  0.02830266 0.001635816 8.966428e-05 7.676848e-05 0.0004563531
+## [2,]  0.07144256  0.2316971  0.03964148 0.002291169 1.255862e-04 1.075240e-04 0.0006391807
+## [3,]  0.30577977  0.9916819  0.16966864 0.009806382 5.375190e-04 4.602114e-04 0.0027357437
+## [4,]  5.90853845 19.1621262  3.27848274 0.189487311 1.038640e-02 8.892598e-03 0.0528623815
+## [5,] 29.01237432 94.0907440 16.09815513 0.930429214 5.099978e-02 4.366484e-02 0.2595672709
+## [6,] 25.88015628 83.9325707 14.36017494 0.829978726 4.549377e-02 3.895072e-02 0.2315440116
+## [7,] 29.97602896 97.2159961 16.63286014 0.961333697 5.269376e-02 4.511518e-02 0.2681888750</code></pre>
+</div>
+<div id="section-11" class="section level3">
+<h3>12</h3>
+<p>Try to reproduce figure 1(b) from the paper.</p>
+<p>I realized that it is not clear from the descriptions given in the paper how the authors themselves produced figure 1. Specifically, from the legend it is not clear which matrix entries they changed in each run or if they changed the <span class="math inline">\(p_i\)</span>-values given in equation (1) and (2).</p>
+<p>Scientific papers should always be written in a manner that the reader can reproduce the results. This is not quite possible here without some try and error. I therefore suggested to drop this question.</p>
+<p>Thanks to Anna it is now clear how to do this:</p>
+<pre class="r"><code># Increasing fecundities with 50% (in the text they actually say that they double the numbers and this is what we do here) :
+
+M.f &lt;- matrix(c(0, 0, 0, 0, 127*2, 4*2, 80*2,
+                0.6747, 0.7370, 0, 0, 0, 0, 0,
+                0, 0.0486, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, 0.6907, 0, 0, 0,
+                0, 0, 0, 0.0518, 0, 0, 0,
+                0, 0, 0, 0, 0.8091, 0, 0,
+                0, 0, 0, 0, 0, 0.8091, 0.8089),
+              nrow = 7, ncol = 7, byrow = T)
+length &lt;-100 
+turtles.f &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.f &lt;- cbind(turtles.f, M.f %*% turtles.f[,i])
+}
+r.f &lt;- log(turtles.f[1, length] / turtles.f[1, length-1])
+
+# Increasing survivorship to 1:
+# Eggs/hatchlings:
+
+M.1 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+              1, 0.7370, 0, 0, 0, 0, 0,
+              0, 0.0486, 0.6610, 0, 0, 0, 0,
+              0, 0, 0.0147, 0.6907, 0, 0, 0,
+              0, 0, 0, 0.0518, 0, 0, 0,
+              0, 0, 0, 0, 0.8091, 0, 0,
+              0, 0, 0, 0, 0, 0.8091, 0.8089),
+            nrow = 7, ncol = 7, byrow = T)
+length &lt;-100 
+turtles.1 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.1 &lt;- cbind(turtles.1, M.1 %*% turtles.1[,i])
+}
+r.1 &lt;- log(turtles.1[1, length] / turtles.1[1, length-1])
+
+# small juveniles:
+# G2 + P2 must equal one. Stage 1 lasts 7 years.
+P2 &lt;- (1*6)/(1*7) # this uses the formula above equation (1) in the paper with p_i=1 and d=7
+G2 &lt;- (1)/(1*7) # this uses the formula above equation (2) in the paper with p_i=1 and d=7
+M.2 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+                0.6747, P2, 0, 0, 0, 0, 0,
+                0, G2, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, 0.6907, 0, 0, 0,
+                0, 0, 0, 0.0518, 0, 0, 0,
+                0, 0, 0, 0, 0.8091, 0, 0,
+                0, 0, 0, 0, 0, 0.8091, 0.8089),
+              nrow = 7, ncol = 7, byrow = T)
+turtles.2 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.2 &lt;- cbind(turtles.2, M.2 %*% turtles.2[,i])
+}
+r.2 &lt;- log(turtles.2[1, length] / turtles.2[1, length-1])
+
+# large juveniles:
+P3 &lt;- 7/8 # this uses the formula above equation (1) in the paper with p_i=1 and d=8
+G3 &lt;- 1/8 # this uses the formula above equation (2) in the paper with p_i=1 and d=8
+M.3 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+              0.6747, 0.7370, 0, 0, 0, 0, 0,
+              0, 0.0486, P3, 0, 0, 0, 0,
+              0, 0, G3, 0.6907, 0, 0, 0,
+              0, 0, 0, 0.0518, 0, 0, 0,
+              0, 0, 0, 0, 0.8091, 0, 0,
+              0, 0, 0, 0, 0, 0.8091, 0.8089),
+            nrow = 7, ncol = 7, byrow = T)
+turtles.3 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.3 &lt;- cbind(turtles.3, M.3 %*% turtles.3[,i])
+}
+r.3 &lt;- log(turtles.3[1, length] / turtles.3[1, length-1])
+
+# Subadults:
+P4 &lt;- 5/6 # this uses the formula above equation (1) in the paper with p_i=1 and d=6
+G4 &lt;- 1/6 # this uses the formula above equation (1) in the paper with p_i=1 and d=6
+M.4 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+                0.6747, 0.7370, 0, 0, 0, 0, 0,
+                0, 0.0486, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, P4, 0, 0, 0,
+                0, 0, 0, G4, 0, 0, 0,
+                0, 0, 0, 0, 0.8091, 0, 0,
+                0, 0, 0, 0, 0, 0.8091, 0.8089),
+              nrow = 7, ncol = 7, byrow = T)
+turtles.4 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.4 &lt;- cbind(turtles.4, M.4 %*% turtles.4[,i])
+}
+r.4 &lt;- log(turtles.4[1, length] / turtles.4[1, length-1])
+
+# novice breeders
+G5 &lt;- 1
+M.5 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+                0.6747, 0.7370, 0, 0, 0, 0, 0,
+                0, 0.0486, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, 0.6907, 0, 0, 0,
+                0, 0, 0, 0.0518, 0, 0, 0,
+                0, 0, 0, 0, G5, 0, 0,
+                0, 0, 0, 0, 0, 0.8091, 0.8089),
+              nrow = 7, ncol = 7, byrow = T)
+turtles.5 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.5 &lt;- cbind(turtles.5, M.5 %*% turtles.5[,i])
+}
+r.5 &lt;- log(turtles.5[1, length] / turtles.5[1, length-1])
+
+# 1st year remigrants
+G6 &lt;- 1
+M.6 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+                0.6747, 0.7370, 0, 0, 0, 0, 0,
+                0, 0.0486, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, 0.6907, 0, 0, 0,
+                0, 0, 0, 0.0518, 0, 0, 0,
+                0, 0, 0, 0, 0.8091, 0, 0,
+                0, 0, 0, 0, 0, G6, 0.8089),
+              nrow = 7, ncol = 7, byrow = T)
+turtles.6 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.6 &lt;- cbind(turtles.6, M.6 %*% turtles.6[,i])
+}
+r.6 &lt;- log(turtles.6[1, length] / turtles.6[1, length-1])
+
+# mature breeders:
+P7 &lt;- 1
+M.7 &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
+                0.6747, 0.7370, 0, 0, 0, 0, 0,
+                0, 0.0486, 0.6610, 0, 0, 0, 0,
+                0, 0, 0.0147, 0.6907, 0, 0, 0,
+                0, 0, 0, 0.0518, 0, 0, 0,
+                0, 0, 0, 0, 0.8091, 0, 0,
+                0, 0, 0, 0, 0, 0.8091, P7),
+              nrow = 7, ncol = 7, byrow = T)
+turtles.7 &lt;- matrix(N.0, nrow = 7) 
+for (i in 1:length){
+  turtles.7 &lt;- cbind(turtles.7, M.7 %*% turtles.7[,i])
+}
+r.7 &lt;- log(turtles.7[1, length] / turtles.7[1, length-1])
+
+effects &lt;- cbind(r.f, r.1, r.2, r.3, r.4, r.5, r.6, r.7)
+par(mar=c(8,4,4,1)+.1)
+barplot(effects, names.arg = c(&quot;Fecundity&quot;, &quot;Eggs/hatchlings&quot;, &quot;Small juveniles&quot;, &quot;Large juveniles&quot;, &quot;Subadults&quot;, &quot;Novice breeders&quot;, &quot;1st-yr remigrants&quot;, &quot;Mature breeders&quot;), las=2, ylim = c(-0.1, 0.15), axes = T)
+abline(h=log(lambda), lty=2)
+abline(h=0, lty=1)</code></pre>
+<p><img src="Turtle-Questions_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="section-12" class="section level3">
+<h3>13</h3>
+<p>Assume that you have two management strategies to choose from. The first strategy would result in an increase of <span class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second strategy would result in an increase of <span class="math inline">\(P_{7}\)</span> by <span class="math inline">\(0.1\)</span> from <span class="math inline">\(0.8089\)</span> to <span class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to calculate an approximate value of <span class="math inline">\(\lambda\)</span> as it would result from the two management strategies. Which strategy is more effective in increasing <span class="math inline">\(\lambda\)</span>? Note that these calculations can be done very easily with just paper and pencil! <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
+<p>Based on the sensitivities we can estimate that the <span class="math inline">\(\lambda\)</span>-value after these changes is approximately equal to</p>
+<pre class="r"><code>lambda + sensitivities[1, 7]*100</code></pre>
+<pre><code>## [1] 0.9906463</code></pre>
+<pre class="r"><code>lambda + sensitivities[7, 7]*0.1</code></pre>
+<pre><code>## [1] 0.9718299</code></pre>
+<p>Neither strategy is sufficient to increase <span class="math inline">\(\lambda\)</span> over 1. Nevertheless, the increase in <span class="math inline">\(F_7\)</span> has a larger effect. These calculations are based on the following rationale:</p>
+<div class="figure">
+<img src="images/sensitivity.png" alt="Life-cyle graph for a size-structured population projection model." />
+<p class="caption">Life-cyle graph for a size-structured population projection model.</p>
+</div>
+<div id="section-13" class="section level4">
+<h4>14</h4>
+<p>Compute the elasticity matrix. Try to reproduce Figure 3 from the paper. <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. --></p>
+<pre class="r"><code>elasticities &lt;- (1/lambda)*M*sensitivities
+elasticities</code></pre>
+<pre><code>##            [,1]       [,2]       [,3]       [,4]       [,5]         [,6]       [,7]
+## [1,] 0.00000000 0.00000000 0.00000000 0.00000000 0.01204998 0.0003249422 0.03863262
+## [2,] 0.05100713 0.18069713 0.00000000 0.00000000 0.00000000 0.0000000000 0.00000000
+## [3,] 0.00000000 0.05100019 0.11867689 0.00000000 0.00000000 0.0000000000 0.00000000
+## [4,] 0.00000000 0.00000000 0.05099802 0.13849456 0.00000000 0.0000000000 0.00000000
+## [5,] 0.00000000 0.00000000 0.00000000 0.05100071 0.00000000 0.0000000000 0.00000000
+## [6,] 0.00000000 0.00000000 0.00000000 0.00000000 0.03895088 0.0000000000 0.00000000
+## [7,] 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.0386267347 0.22956132</code></pre>
+<pre class="r"><code>elas.P &lt;- c(elasticities[1, 1], elasticities[2, 2], elasticities[3, 3], elasticities[4, 4], elasticities[5, 5], elasticities[6, 6], elasticities[7, 7])
+elas.G &lt;- c(elasticities[2, 1], elasticities[3, 2], elasticities[4, 3], elasticities[5, 4], elasticities[6, 5], elasticities[7, 6], 0)
+elas.F &lt;- c(elasticities[1, 2], elasticities[1, 2], elasticities[1, 3], elasticities[1, 4], elasticities[1, 5], elasticities[1, 6], elasticities[1, 7])
+
+figure.3 &lt;- matrix(c(elas.P, elas.G, elas.F),
+                   nrow = 3, # number of rows
+                   ncol = 7, # number of columns
+                   byrow = T) # fill matrix by rows)
+matplot(1:7, t(figure.3), pch = c(24, 22, 21),  type=&quot;b&quot;, lty=1, col = 1, ylab = &quot;elasticities&quot;, xlab = &quot;year&quot;) # plots result
+legend(&quot;topleft&quot;, legend = c(&quot;P&quot;, &quot;G&quot;, &quot;F&quot;), pch = c(24, 22, 21), col = 1, bty = &quot;n&quot;) # defines legend</code></pre>
+<p><img src="Turtle-Questions_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+<div id="section-14" class="section level3">
+<h3>15</h3>
+<p>The elasticity values for <span class="math inline">\(P_{2}\)</span> and <span class="math inline">\(P_{4}\)</span> are particularly high. Are they high for the same reason or for different reasons?</p>
+<p><span class="math inline">\(P_2\)</span> is high because it affects the stage with the most individuals (<span class="math inline">\(66 \%\)</span>). <span class="math inline">\(P_4\)</span> is high because individuals in stage four have a quite hight reproductive value (<span class="math inline">\(116\)</span>).</p>
+<!-- It turns out that the elasticities for $P_{2}$, $P_{3}$ and $P_{4}$ are higher than those for $G_{2}$, $G_{3}$ and $G_{4}$. At the moment I do not understand why. Do you? And if so, can you explain it to me? -->
+<!-- Compute by how much $P_{3}$ and $F_{7}$ would have to be increased for $\lambda$ to become approximately equal to 1? Express these necessary changes as percentages of the original value of the corresponding matrix entry. Are your results to be expected in light of the elasticity matrix? -->
+</div>
+<div id="section-15" class="section level3">
+<h3>16</h3>
+<p>Why is it unlikely that any management strategy could increase one specific matrix entry <span class="math inline">\(a_{ij}\)</span> at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?</p>
+<ul>
+<li><p>Any strategy to increase surival will affect survival over a more or less broad range of age classes. As a consequence of such changes also the survival probabilities of more than one size class is likely to be affected.</p></li>
+<li><p>Similarly, increasing fecundity by protecting beaches will increase the fecundity of all three reproducing size classes.</p></li>
+<li><p>Furthermore, equation (1) and (2) show that the survival probability <span class="math inline">\(P_i\)</span> and the probability to enter the next developmental stage, <span class="math inline">\(G_i\)</span> are both functions of the year-to-year survival probability <span class="math inline">\(p_i\)</span>.</p></li>
+<li><p>The authors address this topic in Table 6 where they show <span class="math inline">\(\lambda\)</span> changes if several matrix entries are changed simultaneously.</p></li>
+</ul>
+<!-- The model discussed in this paper (in fact, all models we discussed during the past week) contains neither environmental stochasticity nor density dependence. Can you make a suggestion for how to include these two factors in the model? What would you predict would be the effect of including each factor in the model? -->
+</div>
+<div id="section-16" class="section level3">
+<h3>17</h3>
+<p>Do you have any other thoughts, ideas or criticism concerning this article?</p>
+</div>
+<div id="section-17" class="section level3">
+<h3>18</h3>
+<p>Read the <a href="https://en.wikipedia.org/wiki/Turtle_excluder_device">Wikipedia article</a> on <em>Turtle excluder devices</em>.</p>
+</div>
+<div id="section-18" class="section level3">
+<h3>19</h3>
+<p>Watch the <a href="https://www.youtube.com/watch?v=hIJvSymWsCc"><em>this</em></a> YouTube video on turtle excluder devices.</p>
+</div>
+<div id="submit-your-answers" class="section level3">
+<h3>Submit your answers</h3>
+<ol style="list-style-type: decimal">
+<li><p>Submit your answers by Monday, 08:00, at the latest.</p></li>
+<li><p>For the life cycle graph, it might be easiest if you make a photo of a drawing of the life cycle graph with your phone.</p></li>
+<li><p>The answers to all other questions can be submitted either in the form of a word document, or an R-file, where you can give text answers using the comment (#) command or by compiling a report in R.</p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

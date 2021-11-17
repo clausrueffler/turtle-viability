@@ -1,0 +1,11 @@
+
+name: "Population and community ecology"
+title: "Population and community ecology"
+type: inverse
+left:
+  - text: "Exercises"
+    menu:
+      - text: "1. Crouse et al. 1987 - Questions"
+        href: ./Turtle-Questions.html
+#      - text: "2. Crouse et al. 1987 - Answers"
+#        href: ./Turtle-Answers.html
