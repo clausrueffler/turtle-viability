@@ -1,8 +1,8 @@
 ---
-title: "Individual Project: How to Save the Loggerhead Turtle?"
-author: "Claus Rüffler"
-date: "11/28/2020"
-output: html_document
+pagetitle: 'Individual Project: How to Save the Loggerhead Turtle? - Answers'
+output: 
+  html_document:
+    toc: FALSE
 ---
 
 ```{r setup, include=FALSE}
@@ -11,9 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![An adult Loggerhead sea turtle](images/loggerhead.jpg)
 
-### 1
-Read the paper *A stage-based population model for loggerhead sea turtles and implications for conservation* by Crouse *et al.* (1987, Ecology 68:1412-1423).
-
 ### 2
 Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).
 
@@ -21,7 +18,7 @@ Draw the life-cycle diagram corresponding to the population projection matrix gi
 
 
 ### 3
-Discuss why the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model.
+Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?
 
 page 1413: insufficient age-based data
 
@@ -40,7 +37,6 @@ page 1414-15: stage-based model of lower dimensionality
 
 - "In addition to the fact that a stage class approach is better supported by the data, one major advantage over using an age class model based on Frazer's life table is that simulations can be performed with a 7 x 7 matrix, instead of an unwieldy 54 x 54 matrix, thereby minimizing error propagation
 caused by repeated multiplication of parameters."
-
 
 <!-- Briefly discuss the quality of the demographic data. Where do you see the largest uncertainty in the accuracy of the demographic data? Do you have (feasible!) suggestions for how to improve the estimates for the vital rates and the matrix entries that would allow for more accurate predictions? -->
 
@@ -65,7 +61,7 @@ Plot the population dynamics for a sufficiently long time until the time series 
 
 The matrix as defined in Table 4 equals
 
-```{r echo = FALSE}
+```{r}
 M <- matrix(c(0, 0, 0, 0, 127, 4, 80,
               0.6747, 0.737, 0, 0, 0, 0, 0,
               0, 0.0486 ,0.661 , 0, 0, 0, 0,
@@ -78,9 +74,7 @@ M <- matrix(c(0, 0, 0, 0, 127, 4, 80,
   byrow = T) # fill matrix by rows
 
 M
-```
 
-```{r echo}
 N.0 <- c(30, 25, 10, 5, 5, 2, 1) # vector of initial densities
 length <- 50 # lenght of the time series
 
@@ -100,7 +94,7 @@ legend("topright", legend = c("stage 1", "stage 2", "stage 3", "stage 4", "stage
 The dynamics enter a phase of exponential decline after roughtly 15 time steps.
 
 ### 7
-Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix.
+Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does ths compare to your method?
 
 The authors describe their method on page 1416, first column. These method are exactly equal to the method you use with your R-code.
 
@@ -162,6 +156,7 @@ sensitivities <- outer.product/inner.product
 sensitivities # print sensitivities
 ```
 
+<!--
 ### 12
 Try to reproduce figure 1(b) from the paper.
 
@@ -313,8 +308,9 @@ barplot(effects, names.arg = c("Fecundity", "Eggs/hatchlings", "Small juveniles"
 abline(h=log(lambda), lty=2)
 abline(h=0, lty=1)
 ```
+-->
 
-### 13
+### 12
 Assume that you have two management strategies to choose from. The first strategy would result in an increase of $F_{7}$ by 100 from 80 to 180. The second strategy would result in an increase of $P_{7}$ by $0.1$ from $0.8089$ to $0.9089$. Use the sensitivity matrix to calculate an approximate value of $\lambda$ as it would result from the two management strategies. Which strategy is more effective in increasing $\lambda$? Note that these calculations can be done very easily with just paper and pencil!
 <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? -->
 
@@ -329,7 +325,7 @@ Neither strategy is sufficient to increase $\lambda$ over 1. Nevertheless, the i
 ![Life-cyle graph for a size-structured population projection model.](images/sensitivity.png)
 
 
-#### 14
+#### 13
 Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.
 <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. -->
 
@@ -352,7 +348,7 @@ legend("topleft", legend = c("P", "G", "F"), pch = c(24, 22, 21), col = 1, bty =
 
 ```
 
-### 15
+### 14
 The elasticity values for $P_{2}$ and $P_{4}$ are particularly high. Are they high for the same reason or for different reasons?
 
 $P_2$ is high because it affects the stage with the most individuals ($66 \%$). $P_4$ is high because individuals in stage four have a quite hight reproductive value ($116$).
@@ -360,7 +356,7 @@ $P_2$ is high because it affects the stage with the most individuals ($66 \%$). 
 <!-- It turns out that the elasticities for $P_{2}$, $P_{3}$ and $P_{4}$ are higher than those for $G_{2}$, $G_{3}$ and $G_{4}$. At the moment I do not understand why. Do you? And if so, can you explain it to me? -->
 <!-- Compute by how much $P_{3}$ and $F_{7}$ would have to be increased for $\lambda$ to become approximately equal to 1? Express these necessary changes as percentages of the original value of the corresponding matrix entry. Are your results to be expected in light of the elasticity matrix? -->
 
-### 16
+### 15
 Why is it unlikely that any management strategy could increase one specific matrix entry $a_{ij}$ at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?
 
 - Any strategy to increase surival will affect survival over a more or less broad range of age classes. As a consequence of such changes also the survival probabilities of more than one size class is likely to be affected.
@@ -373,6 +369,7 @@ Why is it unlikely that any management strategy could increase one specific matr
 
 <!-- The model discussed in this paper (in fact, all models we discussed during the past week) contains neither environmental stochasticity nor density dependence. Can you make a suggestion for how to include these two factors in the model? What would you predict would be the effect of including each factor in the model? -->
 
+<!--
 ### 17
 Do you have any other thoughts, ideas or criticism concerning this article?
 
@@ -381,7 +378,9 @@ Read the [Wikipedia article](https://en.wikipedia.org/wiki/Turtle_excluder_devic
 
 ### 19
 Watch the [*this*](https://www.youtube.com/watch?v=hIJvSymWsCc) YouTube video on turtle excluder devices.
+-->
 
+<!--
 ### Submit your answers
 
 1) Submit your answers by Monday, 08:00, at the latest. 
@@ -389,3 +388,4 @@ Watch the [*this*](https://www.youtube.com/watch?v=hIJvSymWsCc) YouTube video on
 2) For the life cycle graph, it might be easiest if you make a photo of a drawing of the life cycle graph with your phone.
 
 3) The answers to all other questions can be submitted either in the form of a word document, or an R-file, where you can give text answers using the comment (\#) command or by compiling a report in R.
+-->
