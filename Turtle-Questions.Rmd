@@ -14,7 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ### 2
 Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).
 
+<!--
 ![Life-cyle graph for a size-structured population projection model.](images/life-cycle-graph.png)
+-->
 
 ### 3
 Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?
