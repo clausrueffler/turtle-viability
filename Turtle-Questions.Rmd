@@ -11,6 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![An adult Loggerhead sea turtle](images/loggerhead.jpg)
 
+### 1
+Read the paper *A stage-based population model for loggerhead sea turtles and implications for conservation* by Crouse *et al.* (1987, Ecology 68:1412-1423).
+
 ### 2
 Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).
 
