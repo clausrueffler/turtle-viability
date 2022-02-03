@@ -9,6 +9,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r klippy, echo=FALSE, include=TRUE}
+klippy::klippy(position = c('top', 'right'))
+```
+
 ![An adult Loggerhead sea turtle](images/loggerhead.jpg)
 
 ### 1
