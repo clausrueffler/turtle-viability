@@ -39,7 +39,7 @@ Briefly explain the connection between Table 3 and Table 4. How do the entries i
 Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?
 
 ### 6
-Plot the population dynamics for a sufficiently long time until the time series clearly stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?
+Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?
 
 ### 7
 Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?
