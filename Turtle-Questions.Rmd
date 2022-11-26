@@ -54,7 +54,7 @@ log(lambda)
 ```
 
 ### 9
-Compute the stable stage distribution (called $\mathbf w$ in this paper). Present the result in a standardised manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.
+Compute the stable stage distribution (called $\mathbf w$ in this paper). Present the result in a standardized manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.
 
 ```{r eval=FALSE, echo=FALSE}
 total = sum(time.series[ , length+1]) # total population size at the end of the time series (i.e., the right eigenvector)
@@ -66,7 +66,7 @@ rightEV # prints stable age distribution
 <!--This is the same result as in the paper.-->
 
 ### 10
-Compute the vector of reproductive values $\mathbf v$. Present the result in a standardised manner such that the reproductive value of individuals in state 1, $v_{1}$, equals 1. Compare your result with the numbers given in Table 5 of the paper.
+Compute the vector of reproductive values $\mathbf v$. Present the result in a standardized manner such that the reproductive value of individuals in state 1, $v_{1}$, equals 1. Compare your result with the numbers given in Table 5 of the paper.
 
 ```{r eval=FALSE, echo=FALSE}
 transM <- t(M) # transpose of the population projection matrix

@@ -16,13 +16,13 @@ klippy::klippy(position = c('top', 'right'))
 ![An adult Loggerhead sea turtle](images/loggerhead.jpg)
 
 ### 2
-Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).
+**Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).**
 
 ![Life-cyle graph for a size-structured population projection model.](images/life-cycle-graph.png)
 
 
 ### 3
-Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?
+**Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?**
 
 page 1413: insufficient age-based data
 
@@ -45,23 +45,23 @@ caused by repeated multiplication of parameters."
 <!-- Briefly discuss the quality of the demographic data. Where do you see the largest uncertainty in the accuracy of the demographic data? Do you have (feasible!) suggestions for how to improve the estimates for the vital rates and the matrix entries that would allow for more accurate predictions? -->
 
 ### 4 
-Briefly explain the connection between Table 3 and Table 4. How do the entries in the first determine the entries in the second?
+**Briefly explain the connection between Table 3 and Table 4. How do the entries in the first determine the entries in the second?**
 
-Table 3 shows how assumed realationship size classes and age. Furthermore, it shows the estimated annual survival probabilities for each size class and the fecundities for the last three age classes.
+Table 3 shows the assumed relationship size classes and age. Furthermore, it shows the estimated annual survival probabilities for each size class and the fecundities for the last three age classes.
 
-Table 4 shows the population projection matrix based on a size based model. The entries for the stage-based survival and growth probabilities are derived from the age-based survival probabilities according to equations (1) and (2).
+Table 4 shows the population projection matrix for a size-structured model. The entries for the stage-based survival and growth probabilities are derived from the age-based survival probabilities according to equations (1) and (2).
 
 <!-- Eqs.~(1) and (2) explain how the parameters of an age-structured model (age-specific probabilities $p_{i}$ to survive from one year to the next) are used to calculate the stage-specific probabilities to survive and either stay in the same stage-class from one year to the next (the parameters $P_{i}$) or to move to the next stage-class (the probabilities $G_{i}$). This part of the paper is not so easy. Can you nevertheless try to explain the basic idea behind these calculations? -->
 
 ### 5
-Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?
+**Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?**
 
-The matrix is irreducible since all stages can be reached from any other stage by moving along the arrows. Furthermore, the matrix is primitive. The way to see this is by noticing that the life cycle graph has self loops and that it has two neighboring classes that are able to reproduce.
+The matrix is irreducible since all stages can be reached from any other stage by moving along the arrows. Furthermore, the matrix is primitive. The way to see this is by noticing that the life cycle graph has self-loops and that it has two neighboring classes that are able to reproduce.
 
-The fact that the matrix is primitive implies that it has a unique real dominant eigenvalue and corresponding non-negative left and right eigenvectors. Thus, our results will be independent of the initial population vector $\mathbf N(0)$ we might choose for our simulations.
+The fact that the matrix is primitive implies that it has a unique real dominant eigenvalue and corresponding non-negative left and right eigenvectors. Thus, our results will be independent of the initial population vector $\mathbf N(0)$ tht we might choose for our simulations.
 
 ### 6
-Plot the population dynamics for a sufficiently long time until the time series clearly stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?
+**Plot the population dynamics for a sufficiently long time until the time series clearly stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?**
 
 The matrix as defined in Table 4 equals
 
@@ -98,16 +98,16 @@ legend("topright", legend = c("stage 1", "stage 2", "stage 3", "stage 4", "stage
 The dynamics enter a phase of exponential decline after roughtly 15 time steps.
 
 ### 7
-Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does ths compare to your method?
+**Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?**
 
-The authors describe their method on page 1416, first column. These method are exactly equal to the method you use with your R-code.
+The authors describe their method on page 1416, first column. This method is exactly equal to the method you use with your *R*-code.
 
 "For each simulation, the power method (Searle 1966, Keyfitz 1977) was used to take successively higher powers of the matrix and postmultiply by the population vectors until the resultant vectors differed frome ach other by only a scalar factor; this factor is $\lambda$ (the dominant eigenvalue) and the vector is proportional to the right eigenvector $\mathbf w$. The population vectors at this point represent the right eigenvector or stable stage distribution."
 
 "The left eigenvector $\mathbf v$ can be found by applying the same procedure to the transposed matrix."
 
 ### 8
-Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase.
+**Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase.**
 
 ```{r}
 lambda <- time.series[1, length+1]/time.series[1, length] # ratio of population size at the end of the time series for age-class 1. This gives lambda
@@ -118,7 +118,7 @@ log(lambda)
 These values for $\lambda$ and $r$ are equal to those given in the paper on page 1416 in the left column.
 
 ### 9
-Compute the stable stage distribution (called $\mathbf w$ in this paper). Present the result in a standardised manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.
+**Compute the stable stage distribution (called $\mathbf w$ in this paper). Present the result in a standardized manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.**
 
 ```{r}
 total = sum(time.series[ , length+1]) # total population size at the end of the time series (i.e., the right eigenvector)
@@ -130,7 +130,7 @@ rightEV # prints stable age distribution
 This is the same result as in the paper.
 
 ### 10
-Compute the vector of reproductive values $\mathbf v$. Present the result in a standardised manner such that the reproductive value of individuals in state 1, $v_{1}$, equals 1. Compare your result with the numbers given in Table 5 of the paper.
+**Compute the vector of reproductive values $\mathbf v$. Present the result in a standardized manner such that the reproductive value of individuals in state 1, $v_{1}$, equals 1. Compare your result with the numbers given in Table 5 of the paper.**
 
 ```{r}
 transM <- t(M) # transpose of the population projection matrix
@@ -148,7 +148,7 @@ leftEV
 This vector agrees with the vector given in Table 5.
 
 ### 11
-Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of $\lambda$ with respect to the corresponding matrix entry $a_{ij}$ (just as we did in the $\mathsf R$-exercise yesterday).
+**Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of $\lambda$ with respect to the corresponding matrix entry $a_{ij}$ (just as we did in the *R*-exercise yesterday).**
 
 Note that the authors do not present the sensitivity matrix in their paper.
 
@@ -315,7 +315,7 @@ abline(h=0, lty=1)
 -->
 
 ### 12
-Assume that you have two management strategies to choose from. The first strategy would result in an increase of $F_{7}$ by 100 from 80 to 180. The second strategy would result in an increase of $P_{7}$ by $0.1$ from $0.8089$ to $0.9089$. Use the sensitivity matrix to calculate an approximate value of $\lambda$ as it would result from the two management strategies. Which strategy is more effective in increasing $\lambda$? Note that these calculations can be done very easily with just paper and pencil!
+**Assume that you have two management strategies to choose from. The first strategy would result in an increase of $F_{7}$ by 100 from 80 to 180. The second strategy would result in an increase of $P_{7}$ by $0.1$ from $0.8089$ to $0.9089$. Use the sensitivity matrix to calculate an approximate value of $\lambda$ as it would result from the two management strategies. Which strategy is more effective in increasing $\lambda$? Note that these calculations can be done very easily with just paper and pencil!**
 <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? -->
 
 Based on the sensitivities we can estimate that the $\lambda$-value after these changes is approximately equal to
@@ -330,7 +330,7 @@ Neither strategy is sufficient to increase $\lambda$ over 1. Nevertheless, the i
 
 
 #### 13
-Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.
+**Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.**
 <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. -->
 
 ```{r}
@@ -353,15 +353,15 @@ legend("topleft", legend = c("P", "G", "F"), pch = c(24, 22, 21), col = 1, bty =
 ```
 
 ### 14
-The elasticity values for $P_{2}$ and $P_{4}$ are particularly high. Are they high for the same reason or for different reasons?
+**The elasticity values for $P_{2}$ and $P_{4}$ are particularly high. Are they high for the same reason or for different reasons?**
 
-$P_2$ is high because it affects the stage with the most individuals ($66 \%$). $P_4$ is high because individuals in stage four have a quite hight reproductive value ($116$).
+$P_2$ is high because it affects the stage with the most individuals ($66 \%$). $P_4$ is high because individuals in stage four have a quite heigh reproductive value ($116$).
 
 <!-- It turns out that the elasticities for $P_{2}$, $P_{3}$ and $P_{4}$ are higher than those for $G_{2}$, $G_{3}$ and $G_{4}$. At the moment I do not understand why. Do you? And if so, can you explain it to me? -->
 <!-- Compute by how much $P_{3}$ and $F_{7}$ would have to be increased for $\lambda$ to become approximately equal to 1? Express these necessary changes as percentages of the original value of the corresponding matrix entry. Are your results to be expected in light of the elasticity matrix? -->
 
 ### 15
-Why is it unlikely that any management strategy could increase one specific matrix entry $a_{ij}$ at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?
+**Why is it unlikely that any management strategy could increase one specific matrix entry $a_{ij}$ at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?**
 
 - Any strategy to increase surival will affect survival over a more or less broad range of age classes. As a consequence of such changes also the survival probabilities of more than one size class is likely to be affected.
 

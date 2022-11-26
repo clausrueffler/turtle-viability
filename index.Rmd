@@ -6,7 +6,7 @@ output:
 ---
 *Re-analyzing Crouder et al. (1987)*
 
-This website contains the questions for the individual project *How to safe the Loggerhead sea turtle*. Click the exercise button and select the first tab. A second tab containing the answers will appear after the submission deadline. Please submit your answers to the questions including the code and the output as a Rmarkdown file.
+This website contains the questions for the individual project *How to safe the Loggerhead sea turtle*. Click the exercise button and select the tab. A second tab containing the answers will appear after the submission deadline. Please submit your answers to the questions including the code and the output as a *Rmarkdown*-file.
 
 **Enjoy!**
 
