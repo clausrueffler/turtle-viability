@@ -321,8 +321,6 @@ Watch the [*this*](https://www.youtube.com/watch?v=hIJvSymWsCc) YouTube video on
 
 ### Submit your answers
 
-1) Submit your answers by Wednesday, 24:00, at the latest.
+1) Submit your analysis and answers to the questions as an *Rmarkdown* document. The aim is that your work is **reproducible**, that is, every reader can see exactly how you obtained your answers and is able to repeat your analysis based on the submitted document
 
-2) Submit your analysis and answers to the questions as an *Rmarkdown* document. The aim is that any of your scientific colleagues can see exacty how you obtained your answers and is able to repeat your analysis based on the submitted document
-
-2) For the life cycle graph, it might be easiest if you make a photo or a scan of a drawing of the life cycle graph and include it as a figure file using the code from the [Rmarkdown tutorial](https://clausrueffler.github.io/CodingWithR/Markdown.html).
+2) For the life cycle graph, it might be easiest if you make a photo or a scan of a drawing of the life cycle graph and include it as a figure file using the help from the [Rmarkdown tutorial](https://clausrueffler.github.io/CodingWithR/Markdown.html).
