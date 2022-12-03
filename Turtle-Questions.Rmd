@@ -45,7 +45,7 @@ Plot the population dynamics for a sufficiently long time until the time series 
 Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?
 
 ### 8
-Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase.
+Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase. How do you value compare to those reported by the authors? If your values differ, what do you think could be the reason?
 
 ```{r eval=FALSE, echo=FALSE}
 lambda <- time.series[1, length+1]/time.series[1, length] # ratio of population size at the end of the time series for age-class 1. This gives lambda
@@ -264,7 +264,7 @@ lambda + sensitivities[7, 7]*0.1
 ![Life-cyle graph for a size-structured population projection model.](images/sensitivity.png)-->
 
 
-#### 13
+### 13
 Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.
 <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. -->
 
