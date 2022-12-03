@@ -265,7 +265,7 @@ lambda + sensitivities[7, 7]*0.1
 
 
 ### 13
-Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.
+Compute the elasticity matrix. Reproduce Figure 3 from the paper.
 <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. -->
 
 ```{r eval=FALSE, echo=FALSE}
