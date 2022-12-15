@@ -330,7 +330,7 @@ Neither strategy is sufficient to increase $\lambda$ over 1. Nevertheless, the i
 
 
 #### 13
-**Compute the elasticity matrix. Try to reproduce Figure 3 from the paper.**
+**Compute the elasticity matrix. Reproduce Figure 3 from the paper.**
 <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. -->
 
 ```{r}
