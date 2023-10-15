@@ -263,9 +263,6 @@ $(document).ready(function () {
     <li>
       <a href="./Turtle-Questions.html">1. Crouse et al. 1987 - Questions</a>
     </li>
-    <li>
-      <a href="./Turtle-Answers.html">2. Crouse et al. 1987 - Answers</a>
-    </li>
   </ul>
 </li>
       </ul>
@@ -294,7 +291,7 @@ $(document).ready(function () {
 </div>
 <div id="section" class="section level3">
 <h3>1</h3>
-<p>Read the paper <em>A stage-based population model for loggerhead sea turtles and implications for conservation</em> by Crouse <em>et al.</em> (1987, Ecology 68:1412-1423).</p>
+<p>Read the paper <em>A stage-based population model for Loggerhead sea turtles and implications for conservation</em> by Crouse <em>et al.</em> (1987, Ecology 68:1412-1423).</p>
 </div>
 <div id="section-1" class="section level3">
 <h3>2</h3>
@@ -319,7 +316,7 @@ $(document).ready(function () {
 </div>
 <div id="section-5" class="section level3">
 <h3>6</h3>
-<p>Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use <span class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?</p>
+<p>Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis (thus, two different plots are required). Use <span class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?</p>
 </div>
 <div id="section-6" class="section level3">
 <h3>7</h3>
@@ -327,7 +324,7 @@ $(document).ready(function () {
 </div>
 <div id="section-7" class="section level3">
 <h3>8</h3>
-<p>Compute the dominant eigenvalue <span class="math inline">\(\lambda\)</span> and additionally express it as <span class="math inline">\(r\)</span>, the intrinsic rate of increase. How do you value compare to those reported by the authors? If your values differ, what do you think could be the reason?</p>
+<p>Compute the dominant eigenvalue <span class="math inline">\(\lambda\)</span> and additionally express it as <span class="math inline">\(r\)</span>, the intrinsic rate of increase. How do you values compare to those reported by the authors? If your values differ, what do you think could be the reason?</p>
 </div>
 <div id="section-8" class="section level3">
 <h3>9</h3>
@@ -341,7 +338,7 @@ $(document).ready(function () {
 </div>
 <div id="section-10" class="section level3">
 <h3>11</h3>
-<p>Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of <span class="math inline">\(\lambda\)</span> with respect to the corresponding matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did in the <span class="math inline">\(\mathsf R\)</span>-exercise yesterday).</p>
+<p>Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of <span class="math inline">\(\lambda\)</span> with respect to the corresponding matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did in our <span class="math inline">\(\mathsf R\)</span>-exercise).</p>
 <!--Note that the authors do not present the sensitivity matrix in their paper.-->
 <!--### 12
 Try to reproduce figure 1(b) from the paper.
@@ -354,7 +351,7 @@ Thanks to Anna it is now clear how to do this:-->
 </div>
 <div id="section-11" class="section level3">
 <h3>12</h3>
-<p>Assume that you have two management strategies to choose from. The first strategy would result in an increase of <span class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second strategy would result in an increase of <span class="math inline">\(P_{7}\)</span> by <span class="math inline">\(0.1\)</span> from <span class="math inline">\(0.8089\)</span> to <span class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to calculate an approximate value of <span class="math inline">\(\lambda\)</span> as it would result from the two management strategies. Which strategy is more effective in increasing <span class="math inline">\(\lambda\)</span>? Note that these calculations can be done very easily with just paper and pencil! <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
+<p>Assume that you can choose between two management strategies. The first strategy would result in an increase of <span class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second strategy would result in an increase of <span class="math inline">\(P_{7}\)</span> by <span class="math inline">\(0.1\)</span> from <span class="math inline">\(0.8089\)</span> to <span class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to calculate an approximate value of <span class="math inline">\(\lambda\)</span> as it would result from the two management strategies. Which strategy is more effective in increasing <span class="math inline">\(\lambda\)</span>? Note that these calculations can be done very easily with just paper and pencil! <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
 <!--Based on the sensitivities we can estimate that the $\lambda$-value after these changes is approximately equal to-->
 <!--Neither strategy is sufficient to increase $\lambda$ over 1. Nevertheless, the increase in $F_7$ has a larger effect. These calculations are based on the following rationale:
 

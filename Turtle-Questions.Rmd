@@ -16,7 +16,7 @@ klippy::klippy(position = c('top', 'right'))
 ![An adult Loggerhead sea turtle](images/loggerhead.jpg)
 
 ### 1
-Read the paper *A stage-based population model for loggerhead sea turtles and implications for conservation* by Crouse *et al.* (1987, Ecology 68:1412-1423).
+Read the paper *A stage-based population model for Loggerhead sea turtles and implications for conservation* by Crouse *et al.* (1987, Ecology 68:1412-1423).
 
 ### 2
 Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol ($F_{i}$ for fertilities, $G_{i}$ for growth, $P_{i}$ for staying in a state).
@@ -39,13 +39,13 @@ Briefly explain the connection between Table 3 and Table 4. How do the entries i
 Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?
 
 ### 6
-Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis. Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?
+Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis (thus, two different plots are required). Use $\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}$ as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?
 
 ### 7
 Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?
 
 ### 8
-Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase. How do you value compare to those reported by the authors? If your values differ, what do you think could be the reason?
+Compute the dominant eigenvalue $\lambda$ and additionally express it as $r$, the intrinsic rate of increase. How do you values compare to those reported by the authors? If your values differ, what do you think could be the reason?
 
 ```{r eval=FALSE, echo=FALSE}
 lambda <- time.series[1, length+1]/time.series[1, length] # ratio of population size at the end of the time series for age-class 1. This gives lambda
@@ -84,7 +84,7 @@ leftEV
 <!--This vector agrees with the vector given in Table 5.-->
 
 ### 11
-Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of $\lambda$ with respect to the corresponding matrix entry $a_{ij}$ (just as we did in the $\mathsf R$-exercise yesterday).
+Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of $\lambda$ with respect to the corresponding matrix entry $a_{ij}$ (just as we did in our $\mathsf R$-exercise).
 
 <!--Note that the authors do not present the sensitivity matrix in their paper.-->
 
@@ -249,7 +249,7 @@ abline(h=0, lty=1)
 ```
 
 ### 12
-Assume that you have two management strategies to choose from. The first strategy would result in an increase of $F_{7}$ by 100 from 80 to 180. The second strategy would result in an increase of $P_{7}$ by $0.1$ from $0.8089$ to $0.9089$. Use the sensitivity matrix to calculate an approximate value of $\lambda$ as it would result from the two management strategies. Which strategy is more effective in increasing $\lambda$? Note that these calculations can be done very easily with just paper and pencil!
+Assume that you can choose between two management strategies. The first strategy would result in an increase of $F_{7}$ by 100 from 80 to 180. The second strategy would result in an increase of $P_{7}$ by $0.1$ from $0.8089$ to $0.9089$. Use the sensitivity matrix to calculate an approximate value of $\lambda$ as it would result from the two management strategies. Which strategy is more effective in increasing $\lambda$? Note that these calculations can be done very easily with just paper and pencil!
 <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? -->
 
 <!--Based on the sensitivities we can estimate that the $\lambda$-value after these changes is approximately equal to-->
