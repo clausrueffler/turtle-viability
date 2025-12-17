@@ -13,7 +13,7 @@
 
 <title>Individual Project: How to Save the Loggerhead Turtle?</title>
 
-<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -182,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -191,9 +191,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -256,6 +263,9 @@ $(document).ready(function () {
     <li>
       <a href="./Turtle-Questions.html">1. Crouse et al. 1987 - Questions</a>
     </li>
+    <li>
+      <a href="./Turtle-Answers.html">2. Crouse et al. 1987 - Answers</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -284,88 +294,54 @@ $(document).ready(function () {
 </div>
 <div id="section" class="section level3">
 <h3>1</h3>
-<p>Read the paper <em>A stage-based population model for Loggerhead sea
-turtles and implications for conservation</em> by Crouse <em>et al.</em>
-(1987, Ecology 68:1412-1423).</p>
+<p>Read the paper <em>A stage-based population model for Loggerhead sea turtles and implications for conservation</em> by Crouse <em>et al.</em> (1987, Ecology 68:1412-1423).</p>
 </div>
 <div id="section-1" class="section level3">
 <h3>2</h3>
-<p>Draw the life-cycle diagram corresponding to the population
-projection matrix given in Table 4. Mark the arrows with the appropriate
-symbol (<span class="math inline">\(F_{i}\)</span> for fertilities,
-<span class="math inline">\(G_{i}\)</span> for growth, <span
-class="math inline">\(P_{i}\)</span> for staying in a state).</p>
+<p>Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol (<span class="math inline">\(F_{i}\)</span> for fertilities, <span class="math inline">\(G_{i}\)</span> for growth, <span class="math inline">\(P_{i}\)</span> for staying in a state).</p>
 <!--
 ![Life-cyle graph for a size-structured population projection model.](images/life-cycle-graph.png)
 -->
 </div>
 <div id="section-2" class="section level3">
 <h3>3</h3>
-<p>Why do the authors prefer to describe the life cycle with a
-size-structured model rather than an age-structured model?</p>
+<p>Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?</p>
 <!-- Briefly discuss the quality of the demographic data. Where do you see the largest uncertainty in the accuracy of the demographic data? Do you have (feasible!) suggestions for how to improve the estimates for the vital rates and the matrix entries that would allow for more accurate predictions? -->
 </div>
 <div id="section-3" class="section level3">
 <h3>4</h3>
-<p>Briefly explain the connection between Table 3 and Table 4. How do
-the entries in the first determine the entries in the second?</p>
+<p>Briefly explain the connection between Table 3 and Table 4. How do the entries in the first determine the entries in the second?</p>
 <!-- Eqs.~(1) and (2) explain how the parameters of an age-structured model (age-specific probabilities $p_{i}$ to survive from one year to the next) are used to calculate the stage-specific probabilities to survive and either stay in the same stage-class from one year to the next (the parameters $P_{i}$) or to move to the next stage-class (the probabilities $G_{i}$). This part of the paper is not so easy. Can you nevertheless try to explain the basic idea behind these calculations? -->
 </div>
 <div id="section-4" class="section level3">
 <h3>5</h3>
-<p>Determine whether the population projection matrix for the loggerhead
-sea turtle is reducible or irreducible, and whether it is imprimitive or
-primitive. What are the implications of your conclusion for the way you
-can analyze this model?</p>
+<p>Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?</p>
 </div>
 <div id="section-5" class="section level3">
 <h3>6</h3>
-<p>Plot the population dynamics for a sufficiently long time until the
-time series stops fluctuating. Present this plot both with densities on
-the y-axis and with log-densities on the y-axis (thus, two different
-plots are required). Use <span class="math inline">\(\mathbf N(0)=(30,
-25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial
-population densities. How long does the transient dynamics (during which
-the population fluctuates) roughly last?</p>
+<p>Plot the population dynamics for a sufficiently long time until the time series stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis (thus, two different plots are required). Use <span class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?</p>
 </div>
 <div id="section-6" class="section level3">
 <h3>7</h3>
-<p>Describe the procedure used by the authors to compute the dominant
-eigenvalue and the corresponding right and left eigenvectors of the
-population projection matrix. How does this compare to your method?</p>
+<p>Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?</p>
 </div>
 <div id="section-7" class="section level3">
 <h3>8</h3>
-<p>Compute the dominant eigenvalue <span
-class="math inline">\(\lambda\)</span> and additionally express it as
-<span class="math inline">\(r\)</span>, the intrinsic rate of increase.
-How do you values compare to those reported by the authors? If your
-values differ, what do you think could be the reason?</p>
+<p>Compute the dominant eigenvalue <span class="math inline">\(\lambda\)</span> and additionally express it as <span class="math inline">\(r\)</span>, the intrinsic rate of increase. How do you values compare to those reported by the authors? If your values differ, what do you think could be the reason?</p>
 </div>
 <div id="section-8" class="section level3">
 <h3>9</h3>
-<p>Compute the stable stage distribution (called <span
-class="math inline">\(\mathbf w\)</span> in this paper). Present the
-result in a standardized manner such that its entries sum up to 1.
-Compare your result with the numbers given in Table 5 of the paper.</p>
+<p>Compute the stable stage distribution (called <span class="math inline">\(\mathbf w\)</span> in this paper). Present the result in a standardized manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.</p>
 <!--This is the same result as in the paper.-->
 </div>
 <div id="section-9" class="section level3">
 <h3>10</h3>
-<p>Compute the vector of reproductive values <span
-class="math inline">\(\mathbf v\)</span>. Present the result in a
-standardized manner such that the reproductive value of individuals in
-state 1, <span class="math inline">\(v_{1}\)</span>, equals 1. Compare
-your result with the numbers given in Table 5 of the paper.</p>
+<p>Compute the vector of reproductive values <span class="math inline">\(\mathbf v\)</span>. Present the result in a standardized manner such that the reproductive value of individuals in state 1, <span class="math inline">\(v_{1}\)</span>, equals 1. Compare your result with the numbers given in Table 5 of the paper.</p>
 <!--This vector agrees with the vector given in Table 5.-->
 </div>
 <div id="section-10" class="section level3">
 <h3>11</h3>
-<p>Compute the sensitivity matrix, i.e., the matrix that contains in
-each position the partial derivative of <span
-class="math inline">\(\lambda\)</span> with respect to the corresponding
-matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did
-in our <span class="math inline">\(\mathsf R\)</span>-exercise).</p>
+<p>Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of <span class="math inline">\(\lambda\)</span> with respect to the corresponding matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did in our <span class="math inline">\(\mathsf R\)</span>-exercise).</p>
 <!--Note that the authors do not present the sensitivity matrix in their paper.-->
 <!--### 12
 Try to reproduce figure 1(b) from the paper.
@@ -378,20 +354,7 @@ Thanks to Anna it is now clear how to do this:-->
 </div>
 <div id="section-11" class="section level3">
 <h3>12</h3>
-<p>Assume that you can choose between two management strategies. The
-first strategy would result in an increase of <span
-class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second
-strategy would result in an increase of <span
-class="math inline">\(P_{7}\)</span> by <span
-class="math inline">\(0.1\)</span> from <span
-class="math inline">\(0.8089\)</span> to <span
-class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to
-calculate an approximate value of <span
-class="math inline">\(\lambda\)</span> as it would result from the two
-management strategies. Which strategy is more effective in increasing
-<span class="math inline">\(\lambda\)</span>? Note that these
-calculations can be done very easily with just paper and pencil!
-<!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
+<p>Assume that you can choose between two management strategies. The first strategy would result in an increase of <span class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second strategy would result in an increase of <span class="math inline">\(P_{7}\)</span> by <span class="math inline">\(0.1\)</span> from <span class="math inline">\(0.8089\)</span> to <span class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to calculate an approximate value of <span class="math inline">\(\lambda\)</span> as it would result from the two management strategies. Which strategy is more effective in increasing <span class="math inline">\(\lambda\)</span>? Note that these calculations can be done very easily with just paper and pencil! <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
 <!--Based on the sensitivities we can estimate that the $\lambda$-value after these changes is approximately equal to-->
 <!--Neither strategy is sufficient to increase $\lambda$ over 1. Nevertheless, the increase in $F_7$ has a larger effect. These calculations are based on the following rationale:
 
@@ -399,26 +362,18 @@ calculations can be done very easily with just paper and pencil!
 </div>
 <div id="section-12" class="section level3">
 <h3>13</h3>
-<p>Compute the elasticity matrix. Reproduce Figure 3 from the paper.
-<!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. --></p>
+<p>Compute the elasticity matrix. Reproduce Figure 3 from the paper. <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. --></p>
 </div>
 <div id="section-13" class="section level3">
 <h3>14</h3>
-<p>The elasticity values for <span class="math inline">\(P_{2}\)</span>
-and <span class="math inline">\(P_{4}\)</span> are particularly high.
-Are they high for the same reason or for different reasons?</p>
+<p>The elasticity values for <span class="math inline">\(P_{2}\)</span> and <span class="math inline">\(P_{4}\)</span> are particularly high. Are they high for the same reason or for different reasons?</p>
 <!--$P_2$ is high because it affects the stage with the most individuals ($66 \%$). $P_4$ is high because individuals in stage four have a quite hight reproductive value ($116$).-->
 <!-- It turns out that the elasticities for $P_{2}$, $P_{3}$ and $P_{4}$ are higher than those for $G_{2}$, $G_{3}$ and $G_{4}$. At the moment I do not understand why. Do you? And if so, can you explain it to me? -->
 <!-- Compute by how much $P_{3}$ and $F_{7}$ would have to be increased for $\lambda$ to become approximately equal to 1? Express these necessary changes as percentages of the original value of the corresponding matrix entry. Are your results to be expected in light of the elasticity matrix? -->
 </div>
 <div id="section-14" class="section level3">
 <h3>15</h3>
-<p>Why is it unlikely that any management strategy could increase one
-specific matrix entry <span class="math inline">\(a_{ij}\)</span> at a
-time while keeping all other entries constant? What is the consequence
-of this insight for the analysis of the effectiveness of different
-management strategies for sea turtles? How do the authors address this
-issue?</p>
+<p>Why is it unlikely that any management strategy could increase one specific matrix entry <span class="math inline">\(a_{ij}\)</span> at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?</p>
 <!--
 - Any strategy to increase surival will affect survival over a more or less broad range of age classes. As a consequence of such changes also the survival probabilities of more than one size class is likely to be affected.
 
@@ -432,36 +387,21 @@ issue?</p>
 </div>
 <div id="section-15" class="section level3">
 <h3>16</h3>
-<p>Do you have any other thoughts, ideas or criticism concerning this
-article?</p>
+<p>Do you have any other thoughts, ideas or criticism concerning this article?</p>
 </div>
 <div id="section-16" class="section level3">
 <h3>17</h3>
-<p>Read the <a
-href="https://en.wikipedia.org/wiki/Turtle_excluder_device">Wikipedia
-article</a> on <em>Turtle excluder devices</em>.</p>
+<p>Read the <a href="https://en.wikipedia.org/wiki/Turtle_excluder_device">Wikipedia article</a> on <em>Turtle excluder devices</em>.</p>
 </div>
 <div id="section-17" class="section level3">
 <h3>18</h3>
-<p>Watch the <a
-href="https://www.youtube.com/watch?v=hIJvSymWsCc"><em>this</em></a> and
-<a
-href="https://videos.fisheries.noaa.gov/detail/video/6046994059001/reducing-bycatch-helps-restore-sea-turtle-populations?autoStart=true&amp;q=bycatch"><em>this</em></a>
-video on turtle excluder devices.</p>
+<p>Watch the <a href="https://www.youtube.com/watch?v=hIJvSymWsCc"><em>this</em></a> and <a href="https://videos.fisheries.noaa.gov/detail/video/6046994059001/reducing-bycatch-helps-restore-sea-turtle-populations?autoStart=true&amp;q=bycatch"><em>this</em></a> video on turtle excluder devices.</p>
 </div>
 <div id="submit-your-answers" class="section level3">
 <h3>Submit your answers</h3>
 <ol style="list-style-type: decimal">
-<li><p>Submit your analysis and answers to the questions as HTML
-document produced with <em>Rmarkdown</em>. The aim is that your work is
-<strong>reproducible</strong>, that is, every reader can see exactly how
-you obtained your answers and is able to repeat your analysis based on
-the submitted document.</p></li>
-<li><p>For the life cycle graph, it might be easiest if you make a photo
-or a scan of a drawing of the life cycle graph and include it as a
-figure file using the help from the <a
-href="https://clausrueffler.github.io/CodingWithR/Markdown.html">Rmarkdown
-tutorial</a>.</p></li>
+<li><p>Submit your analysis and answers to the questions as HTML document produced with <em>Rmarkdown</em>. The aim is that your work is <strong>reproducible</strong>, that is, every reader can see exactly how you obtained your answers and is able to repeat your analysis based on the submitted document.</p></li>
+<li><p>For the life cycle graph, it might be easiest if you make a photo or a scan of a drawing of the life cycle graph and include it as a figure file using the help from the <a href="https://clausrueffler.github.io/CodingWithR/Markdown.html">Rmarkdown tutorial</a>.</p></li>
 </ol>
 </div>
 

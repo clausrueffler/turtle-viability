@@ -11,10 +11,9 @@
 
 
 
-<title>Individual Project: How to Save the Loggerhead Turtle? -
-Answers</title>
+<title>Individual Project: How to Save the Loggerhead Turtle? - Answers</title>
 
-<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -183,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -192,9 +191,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -257,6 +263,9 @@ $(document).ready(function () {
     <li>
       <a href="./Turtle-Questions.html">1. Crouse et al. 1987 - Questions</a>
     </li>
+    <li>
+      <a href="./Turtle-Answers.html">2. Crouse et al. 1987 - Answers</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -285,97 +294,50 @@ $(document).ready(function () {
 </div>
 <div id="section" class="section level3">
 <h3>2</h3>
-<p><strong>Draw the life-cycle diagram corresponding to the population
-projection matrix given in Table 4. Mark the arrows with the appropriate
-symbol (<span class="math inline">\(F_{i}\)</span> for fertilities,
-<span class="math inline">\(G_{i}\)</span> for growth, <span
-class="math inline">\(P_{i}\)</span> for staying in a
-state).</strong></p>
+<p><strong>Draw the life-cycle diagram corresponding to the population projection matrix given in Table 4. Mark the arrows with the appropriate symbol (<span class="math inline">\(F_{i}\)</span> for fertilities, <span class="math inline">\(G_{i}\)</span> for growth, <span class="math inline">\(P_{i}\)</span> for staying in a state).</strong></p>
 <div class="figure">
 <img src="images/life-cycle-graph.png" alt="" />
-<p class="caption">Life-cyle graph for a size-structured population
-projection model.</p>
+<p class="caption">Life-cyle graph for a size-structured population projection model.</p>
 </div>
 </div>
 <div id="section-1" class="section level3">
 <h3>3</h3>
-<p><strong>Why do the authors prefer to describe the life cycle with a
-size-structured model rather than an age-structured model?</strong></p>
+<p><strong>Why do the authors prefer to describe the life cycle with a size-structured model rather than an age-structured model?</strong></p>
 <p>page 1413: insufficient age-based data</p>
 <ul>
-<li>“no method has yet been devised to obtain accurate ages of sea
-turtles”</li>
-<li>“the shells are generally too thin and fragile to hold a reliable
-tag for long”</li>
-<li>“resulting in inadequate estimates of nesting remigration (and thus
-fecundity) rates, survival and growth rates, and age at reproductive
-maturity”</li>
-<li>“The lack of reliable information on age-specific rates in marine
-turtles precludes the use of age-based population models, so stage class
-models must be employed.”</li>
+<li>“no method has yet been devised to obtain accurate ages of sea turtles”</li>
+<li>“the shells are generally too thin and fragile to hold a reliable tag for long”</li>
+<li>“resulting in inadequate estimates of nesting remigration (and thus fecundity) rates, survival and growth rates, and age at reproductive maturity”</li>
+<li>“The lack of reliable information on age-specific rates in marine turtles precludes the use of age-based population models, so stage class models must be employed.”</li>
 </ul>
 <p>page 1413: stage-based data easier to obtain</p>
 <ul>
-<li>Frazer himself, who analyzed an age-struture model, derived the
-age-specific parameter values from stage-specific data.</li>
-<li>“A few stages (eggs, hatchlings, and mature, nesting adults) are
-biologically distinct and easily recognized, and some estimates of
-survival rates are becoming available for these stages.”</li>
-<li>“Most researchers have used size (as measured by carapace length) as
-an index of age in marine turtles, so size-based stage classes seem
-appropriate.”</li>
+<li>Frazer himself, who analyzed an age-struture model, derived the age-specific parameter values from stage-specific data.</li>
+<li>“A few stages (eggs, hatchlings, and mature, nesting adults) are biologically distinct and easily recognized, and some estimates of survival rates are becoming available for these stages.”</li>
+<li>“Most researchers have used size (as measured by carapace length) as an index of age in marine turtles, so size-based stage classes seem appropriate.”</li>
 </ul>
 <p>page 1414-15: stage-based model of lower dimensionality</p>
 <ul>
-<li>“In addition to the fact that a stage class approach is better
-supported by the data, one major advantage over using an age class model
-based on Frazer’s life table is that simulations can be performed with a
-7 x 7 matrix, instead of an unwieldy 54 x 54 matrix, thereby minimizing
-error propagation caused by repeated multiplication of parameters.”</li>
+<li>“In addition to the fact that a stage class approach is better supported by the data, one major advantage over using an age class model based on Frazer’s life table is that simulations can be performed with a 7 x 7 matrix, instead of an unwieldy 54 x 54 matrix, thereby minimizing error propagation caused by repeated multiplication of parameters.”</li>
 </ul>
 <!-- Briefly discuss the quality of the demographic data. Where do you see the largest uncertainty in the accuracy of the demographic data? Do you have (feasible!) suggestions for how to improve the estimates for the vital rates and the matrix entries that would allow for more accurate predictions? -->
 </div>
 <div id="section-2" class="section level3">
 <h3>4</h3>
-<p><strong>Briefly explain the connection between Table 3 and Table 4.
-How do the entries in the first determine the entries in the
-second?</strong></p>
-<p>Table 3 shows the assumed relationship size classes and age.
-Furthermore, it shows the estimated annual survival probabilities for
-each size class and the fecundities for the last three age classes.</p>
-<p>Table 4 shows the population projection matrix for a size-structured
-model. The entries for the stage-based survival and growth probabilities
-are derived from the age-based survival probabilities according to
-equations (1) and (2).</p>
+<p><strong>Briefly explain the connection between Table 3 and Table 4. How do the entries in the first determine the entries in the second?</strong></p>
+<p>Table 3 shows the assumed relationship size classes and age. Furthermore, it shows the estimated annual survival probabilities for each size class and the fecundities for the last three age classes.</p>
+<p>Table 4 shows the population projection matrix for a size-structured model. The entries for the stage-based survival and growth probabilities are derived from the age-based survival probabilities according to equations (1) and (2).</p>
 <!-- Eqs.~(1) and (2) explain how the parameters of an age-structured model (age-specific probabilities $p_{i}$ to survive from one year to the next) are used to calculate the stage-specific probabilities to survive and either stay in the same stage-class from one year to the next (the parameters $P_{i}$) or to move to the next stage-class (the probabilities $G_{i}$). This part of the paper is not so easy. Can you nevertheless try to explain the basic idea behind these calculations? -->
 </div>
 <div id="section-3" class="section level3">
 <h3>5</h3>
-<p><strong>Determine whether the population projection matrix for the
-loggerhead sea turtle is reducible or irreducible, and whether it is
-imprimitive or primitive. What are the implications of your conclusion
-for the way you can analyze this model?</strong></p>
-<p>The matrix is irreducible since all stages can be reached from any
-other stage by moving along the arrows. Furthermore, the matrix is
-primitive. The way to see this is by noticing that the life cycle graph
-has self-loops and that it has two neighboring classes that are able to
-reproduce.</p>
-<p>The fact that the matrix is primitive implies that it has a unique
-real dominant eigenvalue and corresponding non-negative left and right
-eigenvectors. Thus, our results will be independent of the initial
-population vector <span class="math inline">\(\mathbf N(0)\)</span> tht
-we might choose for our simulations.</p>
+<p><strong>Determine whether the population projection matrix for the loggerhead sea turtle is reducible or irreducible, and whether it is imprimitive or primitive. What are the implications of your conclusion for the way you can analyze this model?</strong></p>
+<p>The matrix is irreducible since all stages can be reached from any other stage by moving along the arrows. Furthermore, the matrix is primitive. The way to see this is by noticing that the life cycle graph has self-loops and that it has two neighboring classes that are able to reproduce.</p>
+<p>The fact that the matrix is primitive implies that it has a unique real dominant eigenvalue and corresponding non-negative left and right eigenvectors. Thus, our results will be independent of the initial population vector <span class="math inline">\(\mathbf N(0)\)</span> tht we might choose for our simulations.</p>
 </div>
 <div id="section-4" class="section level3">
 <h3>6</h3>
-<p><strong>Plot the population dynamics for a sufficiently long time
-until the time series clearly stops fluctuating. Present this plot both
-with densities on the y-axis and with log-densities on the y-axis (thus,
-two different plots are required). Use <span
-class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2,
-1)^\mathrm{T}\)</span> as a vector of initial population densities. How
-long does the transient dynamics (during which the population
-fluctuates) roughly last?</strong></p>
+<p><strong>Plot the population dynamics for a sufficiently long time until the time series clearly stops fluctuating. Present this plot both with densities on the y-axis and with log-densities on the y-axis (thus, two different plots are required). Use <span class="math inline">\(\mathbf N(0)=(30, 25, 10, 5, 5, 2, 1)^\mathrm{T}\)</span> as a vector of initial population densities. How long does the transient dynamics (during which the population fluctuates) roughly last?</strong></p>
 <p>The matrix as defined in Table 4 equals</p>
 <pre class="r"><code>M &lt;- matrix(c(0, 0, 0, 0, 127, 4, 80,
               0.6747, 0.737, 0, 0, 0, 0, 0,
@@ -412,53 +374,28 @@ legend(&quot;topright&quot;, legend = c(&quot;stage 1&quot;, &quot;stage 2&quot;
 <pre class="r"><code>matplot(0:length, t(time.series), type=&quot;l&quot;, lty=1:7, col = 1:7, log=&quot;y&quot;, ylab = &quot;log stage abundance&quot;, xlab = &quot;year&quot;) # plots result on log scale
 legend(&quot;topright&quot;, legend = c(&quot;stage 1&quot;, &quot;stage 2&quot;, &quot;stage 3&quot;, &quot;stage 4&quot;, &quot;stage 5&quot;, &quot;stage 6&quot;, &quot;stage 7&quot;), lty = 1:7, col = 1:7, bty = &quot;n&quot;) # defines legend</code></pre>
 <p><img src="Turtle-Answers_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
-<p>The dynamics enter a phase of exponential decline after roughtly 15
-time steps.</p>
+<p>The dynamics enter a phase of exponential decline after roughtly 15 time steps.</p>
 </div>
 <div id="section-5" class="section level3">
 <h3>7</h3>
-<p><strong>Describe the procedure used by the authors to compute the
-dominant eigenvalue and the corresponding right and left eigenvectors of
-the population projection matrix. How does this compare to your
-method?</strong></p>
-<p>The authors describe their method on page 1416, first column. This
-method is exactly equal to the method you use with your
-<em>R</em>-code.</p>
-<p>“For each simulation, the power method (Searle 1966, Keyfitz 1977)
-was used to take successively higher powers of the matrix and
-postmultiply by the population vectors until the resultant vectors
-differed frome ach other by only a scalar factor; this factor is <span
-class="math inline">\(\lambda\)</span> (the dominant eigenvalue) and the
-vector is proportional to the right eigenvector <span
-class="math inline">\(\mathbf w\)</span>. The population vectors at this
-point represent the right eigenvector or stable stage distribution.”</p>
-<p>“The left eigenvector <span class="math inline">\(\mathbf v\)</span>
-can be found by applying the same procedure to the transposed
-matrix.”</p>
+<p><strong>Describe the procedure used by the authors to compute the dominant eigenvalue and the corresponding right and left eigenvectors of the population projection matrix. How does this compare to your method?</strong></p>
+<p>The authors describe their method on page 1416, first column. This method is exactly equal to the method you use with your <em>R</em>-code.</p>
+<p>“For each simulation, the power method (Searle 1966, Keyfitz 1977) was used to take successively higher powers of the matrix and postmultiply by the population vectors until the resultant vectors differed frome ach other by only a scalar factor; this factor is <span class="math inline">\(\lambda\)</span> (the dominant eigenvalue) and the vector is proportional to the right eigenvector <span class="math inline">\(\mathbf w\)</span>. The population vectors at this point represent the right eigenvector or stable stage distribution.”</p>
+<p>“The left eigenvector <span class="math inline">\(\mathbf v\)</span> can be found by applying the same procedure to the transposed matrix.”</p>
 </div>
 <div id="section-6" class="section level3">
 <h3>8</h3>
-<p><strong>Compute the dominant eigenvalue <span
-class="math inline">\(\lambda\)</span> and additionally express it as
-<span class="math inline">\(r\)</span>, the intrinsic rate of increase.
-How do you values compare to those reported by the authors? If your
-values differ, what do you think could be the reason?</strong></p>
+<p><strong>Compute the dominant eigenvalue <span class="math inline">\(\lambda\)</span> and additionally express it as <span class="math inline">\(r\)</span>, the intrinsic rate of increase. How do you values compare to those reported by the authors? If your values differ, what do you think could be the reason?</strong></p>
 <pre class="r"><code>lambda &lt;- time.series[1, length+1]/time.series[1, length] # ratio of population size at the end of the time series for age-class 1. This gives lambda
 lambda</code></pre>
 <pre><code>## [1] 0.945011</code></pre>
 <pre class="r"><code>log(lambda)</code></pre>
 <pre><code>## [1] -0.05655867</code></pre>
-<p>These values for <span class="math inline">\(\lambda\)</span> and
-<span class="math inline">\(r\)</span> are equal to those given in the
-paper on page 1416 in the left column.</p>
+<p>These values for <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(r\)</span> are equal to those given in the paper on page 1416 in the left column.</p>
 </div>
 <div id="section-7" class="section level3">
 <h3>9</h3>
-<p><strong>Compute the stable stage distribution (called <span
-class="math inline">\(\mathbf w\)</span> in this paper). Present the
-result in a standardized manner such that its entries sum up to 1.
-Compare your result with the numbers given in Table 5 of the
-paper.</strong></p>
+<p><strong>Compute the stable stage distribution (called <span class="math inline">\(\mathbf w\)</span> in this paper). Present the result in a standardized manner such that its entries sum up to 1. Compare your result with the numbers given in Table 5 of the paper.</strong></p>
 <pre class="r"><code>total = sum(time.series[ , length+1]) # total population size at the end of the time series (i.e., the right eigenvector)
 rightEV = time.series[ , length+1]/total # Right eigenvector standardized such that its entries sum up to one. This vector represents proportions in the stable age distribution
 
@@ -469,11 +406,7 @@ rightEV # prints stable age distribution</code></pre>
 </div>
 <div id="section-8" class="section level3">
 <h3>10</h3>
-<p><strong>Compute the vector of reproductive values <span
-class="math inline">\(\mathbf v\)</span>. Present the result in a
-standardized manner such that the reproductive value of individuals in
-state 1, <span class="math inline">\(v_{1}\)</span>, equals 1. Compare
-your result with the numbers given in Table 5 of the paper.</strong></p>
+<p><strong>Compute the vector of reproductive values <span class="math inline">\(\mathbf v\)</span>. Present the result in a standardized manner such that the reproductive value of individuals in state 1, <span class="math inline">\(v_{1}\)</span>, equals 1. Compare your result with the numbers given in Table 5 of the paper.</strong></p>
 <pre class="r"><code>transM &lt;- t(M) # transpose of the population projection matrix
 time.series.transpose &lt;- matrix(0, nrow=nrow(M), ncol=length+1)
 time.series.transpose[ , 1] &lt;- N.0
@@ -489,13 +422,8 @@ leftEV</code></pre>
 </div>
 <div id="section-9" class="section level3">
 <h3>11</h3>
-<p><strong>Compute the sensitivity matrix, i.e., the matrix that
-contains in each position the partial derivative of <span
-class="math inline">\(\lambda\)</span> with respect to the corresponding
-matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did
-in our <em>R</em>-exercise).</strong></p>
-<p>Note that the authors do not present the sensitivity matrix in their
-paper.</p>
+<p><strong>Compute the sensitivity matrix, i.e., the matrix that contains in each position the partial derivative of <span class="math inline">\(\lambda\)</span> with respect to the corresponding matrix entry <span class="math inline">\(a_{ij}\)</span> (just as we did in our <em>R</em>-exercise).</strong></p>
+<p>Note that the authors do not present the sensitivity matrix in their paper.</p>
 <pre class="r"><code>outer.product &lt;- outer(leftEV, rightEV)
 inner.product &lt;- (rightEV %*% leftEV)[1]
 
@@ -676,42 +604,20 @@ abline(h=0, lty=1)
 </div>
 <div id="section-10" class="section level3">
 <h3>12</h3>
-<p><strong>Assume that you can choose between two management strategies.
-The first strategy would result in an increase of <span
-class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second
-strategy would result in an increase of <span
-class="math inline">\(P_{7}\)</span> by <span
-class="math inline">\(0.1\)</span> from <span
-class="math inline">\(0.8089\)</span> to <span
-class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to
-calculate an approximate value of <span
-class="math inline">\(\lambda\)</span> as it would result from the two
-management strategies. Which strategy is more effective in increasing
-<span class="math inline">\(\lambda\)</span>? Note that these
-calculations can be done very easily with just paper and
-pencil!</strong>
-<!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
-<p>Based on the sensitivities we can estimate that the <span
-class="math inline">\(\lambda\)</span>-value after these changes is
-approximately equal to</p>
+<p><strong>Assume that you can choose between two management strategies. The first strategy would result in an increase of <span class="math inline">\(F_{7}\)</span> by 100 from 80 to 180. The second strategy would result in an increase of <span class="math inline">\(P_{7}\)</span> by <span class="math inline">\(0.1\)</span> from <span class="math inline">\(0.8089\)</span> to <span class="math inline">\(0.9089\)</span>. Use the sensitivity matrix to calculate an approximate value of <span class="math inline">\(\lambda\)</span> as it would result from the two management strategies. Which strategy is more effective in increasing <span class="math inline">\(\lambda\)</span>? Note that these calculations can be done very easily with just paper and pencil!</strong> <!-- Does your approximation over- or underestimate the real effect of these changes on $\lambda$? Why? --></p>
+<p>Based on the sensitivities we can estimate that the <span class="math inline">\(\lambda\)</span>-value after these changes is approximately equal to</p>
 <pre class="r"><code>lambda + sensitivities[1, 7]*100</code></pre>
 <pre><code>## [1] 0.9906463</code></pre>
 <pre class="r"><code>lambda + sensitivities[7, 7]*0.1</code></pre>
 <pre><code>## [1] 0.9718299</code></pre>
-<p>Neither strategy is sufficient to increase <span
-class="math inline">\(\lambda\)</span> over 1. Nevertheless, the
-increase in <span class="math inline">\(F_7\)</span> has a larger
-effect. These calculations are based on the following rationale:</p>
+<p>Neither strategy is sufficient to increase <span class="math inline">\(\lambda\)</span> over 1. Nevertheless, the increase in <span class="math inline">\(F_7\)</span> has a larger effect. These calculations are based on the following rationale:</p>
 <div class="figure">
 <img src="images/sensitivity.png" alt="" />
-<p class="caption">Life-cyle graph for a size-structured population
-projection model.</p>
+<p class="caption">Life-cyle graph for a size-structured population projection model.</p>
 </div>
 <div id="section-11" class="section level4">
 <h4>13</h4>
-<p><strong>Compute the elasticity matrix. Reproduce Figure 3 from the
-paper.</strong>
-<!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. --></p>
+<p><strong>Compute the elasticity matrix. Reproduce Figure 3 from the paper.</strong> <!-- You will have to do a bit of research on the web to find the suitable $\mathsf R$-commands to do so. --></p>
 <pre class="r"><code>elasticities &lt;- (1/lambda)*M*sensitivities
 elasticities</code></pre>
 <pre><code>##            [,1]       [,2]       [,3]       [,4]       [,5]         [,6]
@@ -745,42 +651,19 @@ legend(&quot;topleft&quot;, legend = c(&quot;P&quot;, &quot;G&quot;, &quot;F&quo
 </div>
 <div id="section-12" class="section level3">
 <h3>14</h3>
-<p><strong>The elasticity values for <span
-class="math inline">\(P_{2}\)</span> and <span
-class="math inline">\(P_{4}\)</span> are particularly high. Are they
-high for the same reason or for different reasons?</strong></p>
-<p><span class="math inline">\(P_2\)</span> is high because it affects
-the stage with the most individuals (<span class="math inline">\(66
-\%\)</span>). <span class="math inline">\(P_4\)</span> is high because
-individuals in stage four have a quite heigh reproductive value (<span
-class="math inline">\(116\)</span>).</p>
+<p><strong>The elasticity values for <span class="math inline">\(P_{2}\)</span> and <span class="math inline">\(P_{4}\)</span> are particularly high. Are they high for the same reason or for different reasons?</strong></p>
+<p><span class="math inline">\(P_2\)</span> is high because it affects the stage with the most individuals (<span class="math inline">\(66 \%\)</span>). <span class="math inline">\(P_4\)</span> is high because individuals in stage four have a quite heigh reproductive value (<span class="math inline">\(116\)</span>).</p>
 <!-- It turns out that the elasticities for $P_{2}$, $P_{3}$ and $P_{4}$ are higher than those for $G_{2}$, $G_{3}$ and $G_{4}$. At the moment I do not understand why. Do you? And if so, can you explain it to me? -->
 <!-- Compute by how much $P_{3}$ and $F_{7}$ would have to be increased for $\lambda$ to become approximately equal to 1? Express these necessary changes as percentages of the original value of the corresponding matrix entry. Are your results to be expected in light of the elasticity matrix? -->
 </div>
 <div id="section-13" class="section level3">
 <h3>15</h3>
-<p><strong>Why is it unlikely that any management strategy could
-increase one specific matrix entry <span
-class="math inline">\(a_{ij}\)</span> at a time while keeping all other
-entries constant? What is the consequence of this insight for the
-analysis of the effectiveness of different management strategies for sea
-turtles? How do the authors address this issue?</strong></p>
+<p><strong>Why is it unlikely that any management strategy could increase one specific matrix entry <span class="math inline">\(a_{ij}\)</span> at a time while keeping all other entries constant? What is the consequence of this insight for the analysis of the effectiveness of different management strategies for sea turtles? How do the authors address this issue?</strong></p>
 <ul>
-<li><p>Any strategy to increase surival will affect survival over a more
-or less broad range of age classes. As a consequence of such changes
-also the survival probabilities of more than one size class is likely to
-be affected.</p></li>
-<li><p>Similarly, increasing fecundity by protecting beaches will
-increase the fecundity of all three reproducing size classes.</p></li>
-<li><p>Furthermore, equation (1) and (2) show that the survival
-probability <span class="math inline">\(P_i\)</span> and the probability
-to enter the next developmental stage, <span
-class="math inline">\(G_i\)</span> are both functions of the
-year-to-year survival probability <span
-class="math inline">\(p_i\)</span>.</p></li>
-<li><p>The authors address this topic in Table 6 where they show <span
-class="math inline">\(\lambda\)</span> changes if several matrix entries
-are changed simultaneously.</p></li>
+<li><p>Any strategy to increase surival will affect survival over a more or less broad range of age classes. As a consequence of such changes also the survival probabilities of more than one size class is likely to be affected.</p></li>
+<li><p>Similarly, increasing fecundity by protecting beaches will increase the fecundity of all three reproducing size classes.</p></li>
+<li><p>Furthermore, equation (1) and (2) show that the survival probability <span class="math inline">\(P_i\)</span> and the probability to enter the next developmental stage, <span class="math inline">\(G_i\)</span> are both functions of the year-to-year survival probability <span class="math inline">\(p_i\)</span>.</p></li>
+<li><p>The authors address this topic in Table 6 where they show <span class="math inline">\(\lambda\)</span> changes if several matrix entries are changed simultaneously.</p></li>
 </ul>
 <!-- The model discussed in this paper (in fact, all models we discussed during the past week) contains neither environmental stochasticity nor density dependence. Can you make a suggestion for how to include these two factors in the model? What would you predict would be the effect of including each factor in the model? -->
 <!--
